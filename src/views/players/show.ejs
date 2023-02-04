@@ -10,7 +10,7 @@
     </tr>
     <% characters.forEach(function(character){ %>
         <tr>
-            <td><%=character.name%></td>
+            <td><a href="/players/<%=player._id%>/character/<%=character._id%>"><%= character.name%></a></td>
             <td><%=character.class%></td>
             <td><%=character.xp%></td>
         </tr>

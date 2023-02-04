@@ -33,7 +33,18 @@ router.post("/players/:playerID/create_character", (req, res) => {
 });
 
 router.get("/players/:playerID/character/:characterID", (req, res) => {
-    res.render("characters/create", {playerID: req.params.playerID});
+    Characters.findById(req.params.characterID, (err, character) => {
+        if (err) {
+            console.log(err);
+            return;
+        }
+        console.log(character)
+        res.render("characters/show", {playerID: req.params.playerID, character: character});
+    });
+});
+
+router.get("/players/:playerID/character/:characterID/adventure_reward", (req, res) => {
+    res.render("characters/adventure_reward", {playerID: req.params.playerID, characterID: req.body.characterID});
 });
 
 router.get("/ett_characters", (req, res) => {
