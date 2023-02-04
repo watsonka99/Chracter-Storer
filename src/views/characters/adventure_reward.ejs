@@ -1,5 +1,46 @@
 <%- include ("../partials/header") %>
 
-<h1>Avdenture</h1>
+<h1>Avdenture Reward</h1>
+<div class="container">
 
+<form action="/players/<%=playerID%>/character/<%=characterID%>/adventure_input" method="post">
+    <div class="mb-3">
+      <label for="adventure_name" class="form-label">Avdenture Name</label>
+      <input type="text" class="form-control" id="adventure_name"" name="adventure_name">
+    </div>
+    <div class="mb-3">
+      <label for="length" class="form-label">Adventure Length</label>
+      <input type="text" class="form-control" id="length" name="length">
+    </div>
+    <div class="mb-3">
+      <label for="adventure_level" class="form-label">Adventure Level</label>
+      <input type="number" min="1" max="20" class="form-control" id="adventure_level" name="adventure_level">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Character Level</label>
+      <input type="number" min="1" max="20" class="form-control" id="character_level" name="character_level">
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="karma" id="karma">
+        <label class="form-check-label" for="karma">
+          Player Karma
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="gm" id="gm">
+        <label class="form-check-label" for="gm">
+            GM
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="disable" id="disable">
+        <label class="form-check-label" for="disable">
+            Disable Level up karma
+        </label>
+    </div>
+    <button class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+  
 <%- include ("../partials/footer") %>
