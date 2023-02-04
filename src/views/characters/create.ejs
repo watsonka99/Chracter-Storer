@@ -1,0 +1,19 @@
+<%- include ("../partials/header") %>
+
+<form action="/players/<%=playerID%>/create_character" method="post">
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Character Name</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="name@example.com">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Class</label>
+    <input type="text" class="form-control" id="class" name="class" placeholder="name@example.com">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Archetype</label>
+    <input type="text" class="form-control" id="archetype" name="archetype" placeholder="name@example.com">
+  </div>
+  <button class="btn btn-primary">Submit</button>
+</form>
+
+<%- include ("../partials/footer") %>

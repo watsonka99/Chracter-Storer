@@ -1,0 +1,20 @@
+<%- include ("../partials/header") %>
+
+<a href="/new_player"><button type="button" class="btn btn-primary">Create Player</button></a>
+
+<table id="t01">
+    <tr>
+    <th>Player</th>
+    <th>Karma</th>
+    <th>Characters</th>
+    </tr>
+    <% players.forEach(function(player){ %>
+        <tr>
+            <td><a href="/players/<%=player._id%>"><%=player.discord_username%></a></td>
+            <td><%=player.karma%></td>
+            <td><%=player.characters.length%></td>
+        </tr>
+    <% }) %>
+</table>
+
+<%- include ("../partials/footer") %>

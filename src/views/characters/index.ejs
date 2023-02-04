@@ -1,0 +1,18 @@
+<%- include ("../partials/header") %>
+
+<table id="t01">
+    <tr>
+    <th>name</th>
+    <th>class</th>
+    <th>Archetype</th>
+    </tr>
+    <% characters.forEach(function(character){ %>
+        <tr>
+            <td><%=character.name%></a></td>
+            <td><%=character.class%></td>
+            <td><%=character.archetype%></td>
+        </tr>
+    <% }) %>
+</table>
+
+<%- include ("../partials/footer") %>
